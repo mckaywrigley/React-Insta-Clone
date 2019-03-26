@@ -4,6 +4,7 @@ import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
+    console.log(props)
     return (
         <div className="post-container">
             {/* Poster Profile */}
@@ -28,11 +29,21 @@ const PostContainer = props => {
             {/* Likes */}
             <div className="likes">
                 <div className="icons">
-                    <i 
+                {
+                    props.liked
+                    ? <i 
+                        className="fas fa-heart"
+                        onClick = {() => props.likeHandler(props.post.timestamp)}
+                        style={{ color: 'red' }}
+                    >
+                    </i>
+                    : <i 
                         className="far fa-heart"
                         onClick = {() => props.likeHandler(props.post.timestamp)}
                     >
                     </i>
+                }
+                    
                     <i className="far fa-comment"></i>
                 </div>
                 <div className="likes-counter">

@@ -35,25 +35,25 @@ class PostsPage extends Component {
 
       likeHandler = timestamp => {
         this.state.posts.map(post => {
-          if(timestamp === post.timestamp) {
-            let liked = this.state.liked;
-            if(liked === false) {
-              post.likes += 1;
-              liked = true;
-              this.setState({
-                posts: this.state.posts,
-                liked: liked
-              });
-            } else {
-              post.likes = post.likes - 1;
-              liked = false;
-              this.setState({
-                posts: this.state.posts,
-                liked: liked
-              });
+            if(timestamp === post.timestamp) {
+                let liked = this.state.liked;
+                if(liked === false) {
+                    post.likes += 1;
+                    liked = true;
+                    this.setState({
+                        posts: this.state.posts,
+                        liked: liked
+                });
+                } else {
+                    post.likes = post.likes - 1;
+                    liked = false;
+                    this.setState({
+                        posts: this.state.posts,
+                        liked: liked
+                });
+                }
             }
-          }
-          return post;
+            return post;
       });
     }
 
@@ -73,7 +73,7 @@ class PostsPage extends Component {
                             post = {post}
                             key = {post.timestamp}
                             likeHandler = {this.likeHandler}
-                            liked = {this.liked}
+                            liked = {this.state.liked}
                         />
                     })
                 }

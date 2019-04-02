@@ -1,0 +1,35 @@
+.searchbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a i {
+    color: black;
+    margin: 0 10px;
+}
+
+.logo h1 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.search-input {
+    margin: 0 50px;
+}
+
+.navbar {
+
+}
+
+.navbar a i {
+    color: black;
+    margin: 0 10px;
+}

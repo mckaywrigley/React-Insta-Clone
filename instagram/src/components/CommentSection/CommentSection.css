@@ -1,0 +1,35 @@
+.comment-section {
+
+}
+
+.timestamp {
+
+}
+
+.timestamp p {
+    margin: 0 20px;
+    font-size: .6rem;
+    font-weight: lighter;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.add-comment {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: right;
+}
+
+.add-comment input {
+    border: none;
+    width: 680px;
+}
+
+.add-comment i {
+    color: black;
+    margin-left: 20px;
+    width: 40px;
+    text-align: right;
+}
